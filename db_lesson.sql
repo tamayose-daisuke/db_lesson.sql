@@ -1,12 +1,13 @@
 Q1
-mysql> CREATE TABLE departments (
+ CREATE TABLE departments (
     -> department_id INT UNSIGNED NOT NULL auto_increment PRIMARY KEY,
     -> name VARCHAR(20) NOT NULL,
     -> created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    -> updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP                                                                                -> );
+    -> updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP                                                                                
+    -> );
 
 Q2
-ALTER TABLE people DROP COLUMN  department_id AFTER email;
+ALTER TABLE people ADD COLUMN department_id INT unsigned AFTER email;
 
 Q3
 INSERT INTO departments (name)
